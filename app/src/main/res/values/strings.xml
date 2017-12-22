@@ -1,0 +1,250 @@
+<resources>
+    <string name="app_name">AmhTigGeeEng</string>
+    <string name="prayer_menu">Prayer/ፀሎት</string>
+    <string name="hymn_menu">Hymn/ዜማ</string>
+    <string name="litrugy_menu">Litrugy/ቅዳሴ</string>
+    <string name="selected_object">selectedPrayer</string>
+
+    <string name="card_title_Geez">ግዕዝ</string>
+    <string name="card_title_Amharic">አማርኛ</string>
+    <string name="card_title_Tig">ትግርኛ</string>
+    <string name="card_title_Eng">English</string>
+    <string name="geez_card_infro">ጸሎተ ዘዘወትር፣ መዝምር ዳዊት፣ ውዳሴ ማርያም፣ ይወድስትዋ</string>
+    <string name="amharic_card_infro">የዘወትር ጸሎት፣ መዝሙረ ዳዊት፣ ውዳሴ ማርያም፣ ይወድስትዋ</string>
+    <string name="tig_card_infro">ናይ ዘወትር ጸሎት፣ መዝሙር ዳዊት፣ ውዳሴ ማርያም፣ ይወድስትዋ</string>
+    <string name="eng_card_infro">Daily Prayer, Psalm, The book of Mary, Angel</string>
+
+    <string name="day_monday_amharic">ሰኞ</string>
+    <string name="day_tuesday_amharic">ማክሰኞ</string>
+    <string name="day_wednesday_amharic">ረቡዕ</string>
+    <string name="day_thursday_amharic">ሐሙስ</string>
+    <string name="day_friday_amharic">ዐርብ</string>
+    <string name="day_saturday_amharic">ቅዳሜ</string>
+    <string name="day_sunday_amharic">እሁድ</string>
+
+    <string name="day_monday_amharic_desc"> የዘወትር ጸሎት፣ የሰኞ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_tuesday_amharic_desc"> የዘወትር ጸሎት፣ የማክሰኞ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_wednesday_amharic_desc"> የዘወትር ጸሎት፣ የረቡዕ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_thursday_amharic_desc"> የዘወትር ጸሎት፣ የሐሙስ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_friday_amharic_desc"> የዘወትር ጸሎት፣ የዐርብ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_saturday_amharic_desc"> የዘወትር ጸሎት፣ የቅዳሜ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_sunday_amharic_desc"> የዘወትር ጸሎት፣ የእሁድ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+
+    <string name="day_monday_geez">ዘሰኑይ</string>
+    <string name="day_tuesday_geez">ዘሠሉስ</string>
+    <string name="day_wednesday_geez">ዘረቡዕ</string>
+    <string name="day_thursday_geez">ዘሐሙስ</string>
+    <string name="day_friday_geez">ዘዐርብ</string>
+    <string name="day_saturday_geez">ዘቅዳሚተ ሰንበት</string>
+    <string name="day_sunday_geez">ዘሰንበት</string>
+
+    <string name="day_monday_geez_desc"> ጸሎተ ዘዘወትር፣ውዳሴ ማርያም ዘሰኑይ፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_tuesday_geez_desc"> ጸሎተ ዘዘወትር፣ ውዳሴ ማርያም ዘሠሉስ፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_wednesday_geez_desc"> ጸሎተ ዘዘወትር፣ ውዳሴ ማርያም ዘረቡዕ፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_thursday_geez_desc"> ጸሎተ ዘዘወትር፣ ውዳሴ ማርያም ዘሓሙስ፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_friday_geez_desc"> ጸሎተ ዘዘወትር፣ ውዳሴ ማርያም ዘዓርቢ፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_saturday_geez_desc"> ጸሎተ ዘዘወትር፣ ውዳሴ ማርያም ዘቀዳም ሰንበት፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_sunday_geez_desc"> ጸሎተ ዘዘወትር፣ ውዳሴ ማርያም ዘሰንበት፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+
+
+    <string name="day_monday_english">Monday</string>
+    <string name="day_tuesday_english">Tuesday</string>
+    <string name="day_wednesday_english">Wednesday</string>
+    <string name="day_thursday_english">Thursday</string>
+    <string name="day_friday_english">Friday</string>
+    <string name="day_saturday_english">Saturday</string>
+    <string name="day_sunday_english">Sunday</string>
+
+    <string name="day_monday_english_desc"> Daily Prayer፣ Monday Mary Praise፣ Bright Light፣ Angels Thanksgiving </string>
+    <string name="day_tuesday_english_desc"> Daily Prayer፣ Tuesday Mary Praise፣ Bright Light፣ Angels Thanksgiving </string>
+    <string name="day_wednesday_english_desc"> Daily Prayer፣ Wednesday Mary Praise፣ Bright Light፣ Angels Thanksgiving </string>
+    <string name="day_thursday_english_desc"> Daily Prayer፣ Thursday Mary Praise፣ Bright Light፣ Angels Thanksgiving</string>
+    <string name="day_friday_english_desc">Daily Prayer፣ Friday Mary Praise፣ Bright Light፣ Angels Thanksgiving </string>
+    <string name="day_saturday_english_desc"> Daily Prayer፣ Saturday Mary Praise፣ Bright Light፣ Angels Thanksgiving </string>
+    <string name="day_sunday_english_desc"> Daily Prayer፣ Sunday Mary Praise፣ Bright Light፣ Angels Thanksgiving</string>
+
+
+    <string name="day_monday_tig">ሰኑይ</string>
+    <string name="day_tuesday_tig">ሠሉስ</string>
+    <string name="day_wednesday_tig"> ረቡዕ</string>
+    <string name="day_thursday_tig"> ሓሙስ</string>
+    <string name="day_friday_tig"> ዓርቢ</string>
+    <string name="day_saturday_tig"> ቀዳም ሰንበት</string>
+    <string name="day_sunday_tig"> ሰንበት</string>
+
+    <string name="day_monday_tig_desc"> ናይ ዘወትር ጸሎት፣ ናይ ሰኑይ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_tuesday_tig_desc"> ናይ ዘወትር ጸሎት፣ ናይ ሠሉስ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_wednesday_tig_desc"> ናይ ዘወትር ጸሎት፣ ናይ ረቡዕ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_thursday_tig_desc"> ናይ ዘወትር ጸሎት፣ ናይ ሓሙስ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_friday_tig_desc"> ናይ ዘወትር ጸሎት፣ ናይ ዓርቢ ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_saturday_tig_desc"> ናይ ዘወትር ጸሎት፣ ናይ ቀዳም ሰንበት ውዳሴ ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+    <string name="day_sunday_tig_desc"> ናይ ዘወትር ጸሎት፣ ናይ ሰንበት ማርያም፣ አንቀጸ ብርሀን፣ ይዌድስዋ መላእክት </string>
+
+    <string name="ankese_brhan_frag_title">አንቀጸ ብርሀን</string>
+    <string name="ywedswa_frag_title"> ይዌድስዋ መላእክት</string>
+
+    <string name="zewetrTselot_amh_prayer"> This is Zewet tselon in Amh</string>
+    <string name="zewetrTselot_eng_prayer"> This is Zewet tselon in Eng</string>
+    <string name="zewetrTselot_tig_prayer"> This is Zewet tselon in Tig</string>
+    <string name="zewetrTselot_geez_prayer"> This is Zewet tselon in Geez</string>
+
+    <string name="ywedswa_amh_prayer"> This is Ywedswa Melakt in Amh</string>
+    <string name="ywedswa_eng_prayer"> This is Ywedswa Melakt in Eng</string>
+    <string name="ywedswa_tig_prayer"> This is Ywedswa Melakt in Tig</string>
+    <string name="ywedswa_geez_prayer"> This is Ywedswa Melakt in Geez</string>
+
+    <string name="ank_amh_prayer"> This is Ankese in Amh</string>
+    <string name="ank_eng_prayer"> This is Ankese in Eng</string>
+    <string name="ank_tig_prayer"> This is Ankese in Tig</string>
+    <string name="ank_geez_prayer"> This is Ankese in Geez</string>
+
+
+    <string name="wdase_maryam_amh_mon"> This is Widase Maryam Mon in Amh</string>
+    <string name="wdase_maryam_amh_tues"> This is Widase Maryam Tues in Amh</string>
+    <string name="wdase_maryam_amh_wed"> This is Widase Maryam Wed in Amh</string>
+    <string name="wdase_maryam_amh_thur"> This is Widase Maryam Thur in Amh</string>
+    <string name="wdase_maryam_amh_fri"> This is Widase Maryam Fri in Amh</string>
+    <string name="wdase_maryam_amh_sat"> This is Widase Maryam Sat in Amh</string>
+    <string name="wdase_maryam_amh_sun"> This is Widase Maryam Sun in Amh</string>
+
+
+    <string name="wdase_maryam_eng_mon"> This is Widase Maryam Mon in Eng</string>
+    <string name="wdase_maryam_eng_tues"> This is Widase Maryam Tues in Eng</string>
+    <string name="wdase_maryam_eng_wed"> This is Widase Maryam Wed in Eng</string>
+    <string name="wdase_maryam_eng_thur"> This is Widase Maryam Thur in Eng</string>
+    <string name="wdase_maryam_eng_fri"> This is Widase Maryam Fri in Eng</string>
+    <string name="wdase_maryam_eng_sat"> This is Widase Maryam Sat in Eng</string>
+    <string name="wdase_maryam_eng_sun"> This is Widase Maryam Sun in Eng</string>
+
+
+    <string name="wdase_maryam_tig_mon"> This is Widase Maryam Mon in Tig</string>
+    <string name="wdase_maryam_tig_tues"> This is Widase Maryam Tues in Tig</string>
+    <string name="wdase_maryam_tig_wed"> This is Widase Maryam Wed in Tig</string>
+    <string name="wdase_maryam_tig_thur"> This is Widase Maryam Thur in Tig</string>
+    <string name="wdase_maryam_tig_fri"> This is Widase Maryam Fri in Tig</string>
+    <string name="wdase_maryam_tig_sat"> This is Widase Maryam Sat in Tig</string>
+    <string name="wdase_maryam_tig_sun"> This is Widase Maryam Sun in Tig</string>
+
+    <string name="wdase_maryam_geez_mon"> This is Widase Maryam Mon in Geez</string>
+    <string name="wdase_maryam_geez_tues"> This is Widase Maryam Tues in Geez</string>
+    <string name="wdase_maryam_geez_wed"> This is Widase Maryam Wed in Geez</string>
+    <string name="wdase_maryam_geez_thur"> This is Widase Maryam Thur in Geez</string>
+    <string name="wdase_maryam_geez_fri"> This is Widase Maryam Fri in Geez</string>
+    <string name="wdase_maryam_geez_sat"> This is Widase Maryam Sat in Geez</string>
+    <string name="wdase_maryam_geez_sun"> This is Widase Maryam Sun in Geez</string>
+
+    <string name="mez_amh_title">መዝሙር ዳዊት</string>
+    <string name="mez_eng_title">Psalsm</string>
+    <string name="mez_geez_title">ዘመዝሙር ዳዊት</string>
+    <string name="mez_tig_title">መዝሙረ ዳዊት</string>
+
+    <string name="daw_eng_1st">Psalsm first hour</string>
+    <string name="daw_eng_1st_des">Psalsm first hour</string>
+    <string name="daw_eng_2nd">Psalsm second hour</string>
+    <string name="daw_eng_2nd_des">Psalsm second hour</string>
+    <string name="daw_eng_3rd">Psalsm third hour</string>
+    <string name="daw_eng_3rd_des">Psalsm second hour</string>=
+    <string name="daw_eng_4th">Psalsm fourth hour</string>
+    <string name="daw_eng_4th_des">Psalsm second hour</string>
+
+    <string name="daw_amh_1st">Mezmure Dawit amh first</string>
+    <string name="daw_amh_1st_des">Mezmure Dawit amh first des </string>
+    <string name="daw_amh_2nd">Mezmure Dawit amh second</string>
+    <string name="daw_amh_2nd_des">Mezmure Dawit amh second des </string>
+    <string name="daw_amh_3rd">Mezmure Dawit amh third</string>
+    <string name="daw_amh_3rd_des">Mezmure Dawit amh third des</string>
+    <string name="daw_amh_4th">Mezmure Dawit amh fourth</string>
+    <string name="daw_amh_4th_des">Mezmure Dawit amh fourth des</string>
+
+    <string name="daw_geez_1st">Mezmure Dawit geez first</string>
+    <string name="daw_geez_1st_des">Mezmure Dawit geez first des </string>
+    <string name="daw_geez_2nd">Mezmure Dawit geez second</string>
+    <string name="daw_geez_2nd_des">Mezmure Dawit geez second des </string>
+    <string name="daw_geez_3rd">Mezmure Dawit geez third</string>
+    <string name="daw_geez_3rd_des">Mezmure Dawit geez third des</string>=
+    <string name="daw_geez_4th">Mezmure Dawit geez fourth</string>
+    <string name="daw_geez_4th_des">Mezmure Dawit geez fourth des</string>
+
+    <string name="daw_tig_1st">Mezmure Dawit tig first</string>
+    <string name="daw_tig_1st_des">Mezmure Dawit tig first des </string>
+    <string name="daw_tig_2nd">Mezmure Dawit tig second</string>
+    <string name="daw_tig_2nd_des">Mezmure Dawit tig second des </string>
+    <string name="daw_tig_3rd">Mezmure Dawit tig third</string>
+    <string name="daw_tig_3rd_des">Mezmure Dawit tig third des</string>=
+    <string name="daw_tig_4th">Mezmure Dawit tig fourth</string>
+    <string name="daw_tig_4th_des">Mezmure Dawit tig fourth des</string>
+
+    <string name="daw_tig_first_first">Tig part one First Section</string>
+    <string name="daw_tig_first_second">Tig part two First Section</string>
+    <string name="daw_tig_first_third">Tig part three First Section</string>
+    <string name="daw_tig_first_fourth">Tig part four First Section</string>
+
+    <string name="daw_tig_second_first">Tig part two Third Section</string>
+    <string name="daw_tig_second_second">Tig part two Third Section</string>
+    <string name="daw_tig_second_third">Tig part two Third Section</string>
+    <string name="daw_tig_second_fourth">Tig part two Fourth Section</string>
+
+    <string name="daw_tig_third_first">Tig part three Third Section</string>
+    <string name="daw_tig_third_second">Tig part three Third Section</string>
+    <string name="daw_tig_third_third">Tig part three Third Section</string>
+    <string name="daw_tig_third_fourth">Tig part three Fourth Section</string>
+
+
+    <string name="daw_eng_first_first">Eng part one First Section</string>
+    <string name="daw_eng_first_second">Eng part one Second Section</string>
+    <string name="daw_eng_first_third">Eng part one Third Section</string>
+
+    <string name="daw_eng_second_first">Eng part two First Section</string>
+    <string name="daw_eng_second_second">Eng part two Second Section</string>
+    <string name="daw_eng_second_third">Eng part two Third Section</string>
+
+    <string name="daw_eng_third_first">Eng part three First Section</string>
+    <string name="daw_eng_third_second">Eng part three Second Section</string>
+    <string name="daw_eng_third_third">Eng part three Third Section</string>
+
+    <string name="daw_geez_first_first">Geez part one First Section</string>
+    <string name="daw_geez_first_second">Geez part one Second Section</string>
+    <string name="daw_geez_first_third">Geez part one Third Section</string>
+
+    <string name="daw_geez_second_first">Geez part two First Section</string>
+    <string name="daw_geez_second_second">Geez part two Second Section</string>
+    <string name="daw_geez_second_third">Geez part two Third Section</string>
+
+    <string name="daw_geez_third_first">Geez part three First Section</string>
+    <string name="daw_geez_third_second">Geez part three Second Section</string>
+    <string name="daw_geez_third_third">Geez part three Third Section</string>
+
+    <string name="daw_geez_fourth_first">Geez part four First Section</string>
+    <string name="daw_geez_fourth_second">Geez part four Second Section</string>
+    <string name="daw_geez_fourth_third">Geez part four Third Section</string>
+
+    <string name="daw_amh_first_first">Amharic part one First Section</string>
+    <string name="daw_amh_first_second">Amharic part one Second Section</string>
+    <string name="daw_amh_first_third">Amharic part one Third Section</string>
+
+    <string name="daw_amh_second_first">Amharic part two First Section</string>
+    <string name="daw_amh_second_second">Amharic part two Second Section</string>
+    <string name="daw_amh_second_third">Amharic part two Third Section</string>
+
+    <string name="daw_amh_third_first">Amharic part three First Section</string>
+    <string name="daw_amh_third_second">Amharic part three Second Section</string>
+    <string name="daw_amh_third_third">Amharic part three Third Section</string>
+
+    <string name="daw_amh_fourth_first">Amh part four First Section</string>
+    <string name="daw_amh_fourth_second">Amh part four Second Section</string>
+    <string name="daw_amh_fourth_third">Amh part four Third Section</string>
+
+    <string name="daw_eng_fourth_first">Eng part four First Section</string>
+    <string name="daw_eng_fourth_second">Eng part four Second Section</string>
+    <string name="daw_eng_fourth_third">Eng part four Third Section</string>
+
+    <string name="daw_tig_fourth_first">Tig part four First Section</string>
+    <string name="daw_tig_fourth_second">Tig part four Second Section</string>
+    <string name="daw_tig_fourth_third">Tig part four Third Section</string>
+    <string name="image_description">This is the image the main page</string>
+    <string name="place_holder_dawit_one">Part one dawit placeholder</string>
+    <string name="daw_pt_two_placeholder">Dawit Part Two</string>
+    <string name="dawit_part_three">Dawit Part three</string>
+
+
+</resources>
