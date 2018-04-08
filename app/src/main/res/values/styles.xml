@@ -6,6 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="ActionBar.Solid.Prayer.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@drawable/prayer</item>
+     </style>
+
+
+    <style name="AppTheme.MainNoTitle" parent="@style/AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.Prayer.NoTitle</item>
     </style>
 
     <style name="HeadingTextStyle">
@@ -18,4 +29,16 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <style name="PrayerText">
+        <item name="android:textColor">#333</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:lineSpacingExtra">10dp</item>
+        <item name="android:fontFamily">@font/jiret</item>
+    </style>
+
+    <style name="PrayerTextEnglish" parent="PrayerText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
 </resources>

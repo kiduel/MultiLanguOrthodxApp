@@ -9,9 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.kidus11.amhtiggeeeng.Activities.KdaseActivity;
 import com.example.kidus11.amhtiggeeeng.Activities.LangaugeActivity;
+import com.example.kidus11.amhtiggeeeng.Activities.ZemaActivity;
 import com.example.kidus11.amhtiggeeeng.R;
 import com.example.kidus11.amhtiggeeeng.data.PrayersMain;
 
@@ -23,10 +24,8 @@ import java.util.ArrayList;
 
 public class MainRVPageAdapter extends RecyclerView.Adapter<MainRVPageAdapter.ViewHolder> {
 
-    private ArrayList<PrayersMain> prayers;
-    private Context context;
-    PrayersMain option;
-
+    private final ArrayList<PrayersMain> prayers;
+    private final Context context;
 
 
     public MainRVPageAdapter(Context context, ArrayList<PrayersMain> prayers) {
@@ -39,9 +38,10 @@ public class MainRVPageAdapter extends RecyclerView.Adapter<MainRVPageAdapter.Vi
     // Provide a direct reference to each of the views within a data item
     // Used to cache the views within the item layout for fast access
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView prayerTitle;
-        private ImageView prayerImage;
-        private View parentView;
+        private final TextView prayerTitle;
+        private final TextView prayerDesc;
+        private final ImageView prayerImage;
+        private final View parentView;
 
 
         public ViewHolder(View itemView) {
@@ -49,8 +49,9 @@ public class MainRVPageAdapter extends RecyclerView.Adapter<MainRVPageAdapter.Vi
             // to access the context from any ViewHolder instance.
             super(itemView);
             this.parentView = itemView;
-            prayerTitle = (TextView) itemView.findViewById(R.id.option_name);
-            prayerImage = (ImageView) itemView.findViewById(R.id.option_bk);
+            prayerTitle = itemView.findViewById(R.id.option_name);
+            prayerImage = itemView.findViewById(R.id.option_bk);
+            prayerDesc = itemView.findViewById(R.id.main_prayer_desc);
 
 
             this.parentView.setOnClickListener(this);
@@ -68,10 +69,17 @@ public class MainRVPageAdapter extends RecyclerView.Adapter<MainRVPageAdapter.Vi
                     context.startActivity(intent, options.toBundle());
                     break;
                 case 1:
-                    Toast.makeText(context, "Hello", Toast.LENGTH_SHORT).show();
+
+                    ActivityOptions option1 =
+                            ActivityOptions.makeCustomAnimation(context, R.anim.in, R.anim.out);
+                    Intent intent1 = new Intent(context, ZemaActivity.class);
+                    context.startActivity(intent1, option1.toBundle());
                     break;
                 case 2:
-                    Toast.makeText(context, "Hi there", Toast.LENGTH_SHORT).show();
+                    ActivityOptions option2 =
+                            ActivityOptions.makeCustomAnimation(context, R.anim.in, R.anim.out);
+                    Intent intent2 = new Intent(context, KdaseActivity.class);
+                    context.startActivity(intent2, option2.toBundle());
                     break;
             }
         }
@@ -93,6 +101,7 @@ public class MainRVPageAdapter extends RecyclerView.Adapter<MainRVPageAdapter.Vi
         PrayersMain option = prayers.get(position);
         holder.prayerTitle.setText(option.getTitle());
         holder.prayerImage.setImageResource(option.getIcon());
+        holder.prayerDesc.setText(option.getPrayer_dis());
     }
 
 

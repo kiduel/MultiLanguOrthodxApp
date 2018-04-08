@@ -1,6 +1,8 @@
 package com.example.kidus11.amhtiggeeeng;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 
 /**
@@ -22,7 +24,6 @@ public class Utility {
      */
     public static int setLanguage(String day, Context context) {
         int Language = 0;
-
         if ( day.equals((context.getResources().getString(R.string.day_monday_geez)))
                 || day.equals((context.getResources().getString(R.string.day_tuesday_geez)))
                 || day.equals((context.getResources().getString(R.string.day_wednesday_geez)))
@@ -35,6 +36,8 @@ public class Utility {
                 || day.equals((context.getResources().getString(R.string.daw_geez_2nd)))
                 || day.equals((context.getResources().getString(R.string.daw_geez_3rd)))
                 || day.equals((context.getResources().getString(R.string.daw_geez_4th)))
+                || day.equals((context.getResources().getString(R.string.daw_geez_5th)))
+
                 ) {
             Language = GEEZ;
         } else if ( (day.equals((context.getResources().getString(R.string.day_monday_amharic)))
@@ -49,6 +52,8 @@ public class Utility {
                 || day.equals((context.getResources().getString(R.string.daw_amh_2nd)))
                 || day.equals((context.getResources().getString(R.string.daw_amh_3rd)))
                 || day.equals((context.getResources().getString(R.string.daw_amh_4th)))
+                || day.equals((context.getResources().getString(R.string.daw_amh_5th)))
+
         ) )
 
         {
@@ -64,7 +69,12 @@ public class Utility {
                 || day.equals((context.getResources().getString(R.string.daw_eng_1st)))
                 || day.equals((context.getResources().getString(R.string.daw_eng_2nd)))
                 || day.equals((context.getResources().getString(R.string.daw_eng_3rd)))
-                || day.equals((context.getResources().getString(R.string.daw_eng_4th)))) ) {
+                || day.equals((context.getResources().getString(R.string.daw_eng_4th)))
+                || day.equals((context.getResources().getString(R.string.daw_eng_5th)))
+                || day.equals((context.getResources().getString(R.string.daw_eng_6th)))
+                || day.equals((context.getResources().getString(R.string.daw_eng_7th)))
+                || day.equals((context.getResources().getString(R.string.daw_eng_8th)))
+        ) ) {
             Language = ENGLISH;
         } else if ( (day.equals((context.getResources().getString(R.string.day_monday_tig)))
                 || day.equals((context.getResources().getString(R.string.day_tuesday_tig)))
@@ -78,6 +88,9 @@ public class Utility {
                 || day.equals((context.getResources().getString(R.string.daw_tig_2nd)))
                 || day.equals((context.getResources().getString(R.string.daw_tig_3rd)))
                 || day.equals((context.getResources().getString(R.string.daw_tig_4th)))
+                || day.equals((context.getResources().getString(R.string.daw_tig_5th)))
+                || day.equals((context.getResources().getString(R.string.daw_tig_6th)))
+                || day.equals((context.getResources().getString(R.string.daw_tig_7th)))
 
         ) ) {
             Language = TIGRIGNA;
@@ -197,6 +210,10 @@ public class Utility {
                 prayer_one = ((context.getResources().getString(R.string.daw_geez_fourth_first)));
                 prayer_two = ((context.getResources().getString(R.string.daw_geez_fourth_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_geez_fourth_third)));
+            } else if ( day.equals(context.getResources().getString(R.string.daw_geez_5th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_geez_fifth_first)));
+                prayer_two = ((context.getResources().getString(R.string.daw_geez_fifth_second)));
+                prayer_three = ((context.getResources().getString(R.string.daw_geez_fifth_third)));
             }
         }
 
@@ -217,50 +234,98 @@ public class Utility {
                 prayer_one = ((context.getResources().getString(R.string.daw_amh_fourth_first)));
                 prayer_two = ((context.getResources().getString(R.string.daw_amh_fourth_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_amh_fourth_third)));
+            } else if ( day.equals(context.getResources().getString(R.string.daw_amh_5th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_amh_fifth_first)));
+                prayer_two = ((context.getResources().getString(R.string.daw_amh_fifth_second)));
+                prayer_three = ((context.getResources().getString(R.string.daw_amh_fifth_third)));
             }
         }
 
         if ( language == ENGLISH ) {
+
+
             if ( day.equals(context.getResources().getString(R.string.daw_eng_1st)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_eng_first_first)));
+                prayer_one = (context.getResources().getString(R.string.daw_eng_into_prayer));
                 prayer_two = ((context.getResources().getString(R.string.daw_eng_first_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_eng_first_third)));
             } else if ( day.equals(context.getResources().getString(R.string.daw_eng_2nd)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_eng_second_first)));
+                prayer_one = ((context.getResources().getString(R.string.daw_eng_into_prayer)));
                 prayer_two = ((context.getResources().getString(R.string.daw_eng_second_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_eng_second_third)));
             } else if ( day.equals(context.getResources().getString(R.string.daw_eng_3rd)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_eng_third_first)));
+                prayer_one = ((context.getResources().getString(R.string.daw_eng_into_prayer)));
                 prayer_two = ((context.getResources().getString(R.string.daw_eng_third_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_eng_third_third)));
             } else if ( day.equals(context.getResources().getString(R.string.daw_eng_4th)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_eng_fourth_first)));
+                prayer_one = ((context.getResources().getString(R.string.daw_eng_into_prayer)));
                 prayer_two = ((context.getResources().getString(R.string.daw_eng_fourth_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_eng_fourth_third)));
             }
+            else if ( day.equals(context.getResources().getString(R.string.daw_eng_5th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_eng_into_prayer)));
+                prayer_two = ((context.getResources().getString(R.string.daw_eng_fifth_second)));
+                prayer_three = ((context.getResources().getString(R.string.daw_eng_fifth_third)));
+            }
+            else if ( day.equals(context.getResources().getString(R.string.daw_eng_6th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_eng_into_prayer)));
+                prayer_two = ((context.getResources().getString(R.string.eng_six_prayer_second)));
+                prayer_three = ((context.getResources().getString(R.string.eng_six_prayer_third)));
+            }
+            else if ( day.equals(context.getResources().getString(R.string.daw_eng_7th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_eng_into_prayer)));
+                prayer_two = ((context.getResources().getString(R.string.eng_seven_prayer_second)));
+                prayer_three = ((context.getResources().getString(R.string.eng_seven_prayer_third)));
+            }
+            else if ( day.equals(context.getResources().getString(R.string.daw_eng_8th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_eng_into_prayer)));
+                prayer_two = ((context.getResources().getString(R.string.eng_eight_prayer_second)));
+                prayer_three = ((context.getResources().getString(R.string.eng_seven_prayer_third)));
+            }
+
+
         } else if ( language == TIGRIGNA ) {
             if ( day.equals(context.getResources().getString(R.string.daw_tig_1st)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_tig_first_first)));
+                prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
                 prayer_two = ((context.getResources().getString(R.string.daw_tig_first_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_tig_first_third)));
             } else if ( day.equals(context.getResources().getString(R.string.daw_tig_2nd)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_tig_second_first)));
+                prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
                 prayer_two = ((context.getResources().getString(R.string.daw_tig_second_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_tig_second_third)));
             } else if ( day.equals(context.getResources().getString(R.string.daw_tig_3rd)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_tig_third_first)));
+                prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
                 prayer_two = ((context.getResources().getString(R.string.daw_tig_third_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_tig_third_third)));
             } else if ( day.equals(context.getResources().getString(R.string.daw_tig_4th)) ) {
-                prayer_one = ((context.getResources().getString(R.string.daw_tig_fourth_first)));
-                prayer_two = ((context.getResources().getString(R.string.daw_tig_fourth_second)));
+                prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
+            //    prayer_two = ((context.getResources().getString(R.string.daw_tig_fourth_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_tig_fourth_third)));
+            } else if (day.equals(context.getResources().getString(R.string.daw_tig_5th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
+                prayer_two = ((context.getResources().getString(R.string.daw_tig_fifth_second)));
+                prayer_three = ((context.getResources().getString(R.string.daw_tig_fifth_third)));
+            } else if (day.equals(context.getResources().getString(R.string.daw_tig_6th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
+                prayer_two = ((context.getResources().getString(R.string.daw_tig_six_second)));
+                prayer_three = ((context.getResources().getString(R.string.daw_tig_six_third)));
+            }
+            else if (day.equals(context.getResources().getString(R.string.daw_tig_7th)) ) {
+                prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
+                prayer_two = ((context.getResources().getString(R.string.daw_tig_seven_second)));
+                prayer_three = ((context.getResources().getString(R.string.daw_tig_seven_third)));
             }
         }
-        String[] dawit_prayer = {prayer_one, prayer_two, prayer_three};
-        return dawit_prayer;
+        return new String[]{prayer_one, prayer_two, prayer_three};
+    }
+
+    public static boolean isOnline(Context context) {
+        ConnectivityManager cm =
+                (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
     }
 }
+
 
 
 

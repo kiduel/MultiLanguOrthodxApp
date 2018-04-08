@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,6 @@ import butterknife.ButterKnife;
 
 import static com.example.kidus11.amhtiggeeeng.Activities.PrayerFragmentActivity.PASSED_TO_FRAG;
 import static com.example.kidus11.amhtiggeeeng.Utility.AMHARIC;
-import static com.example.kidus11.amhtiggeeeng.Utility.ENGLISH;
 import static com.example.kidus11.amhtiggeeeng.Utility.GEEZ;
 import static com.example.kidus11.amhtiggeeeng.Utility.TIGRIGNA;
 
@@ -29,8 +29,6 @@ public class AnkeseBrhanFragment extends Fragment {
     @BindView(R.id.ankese_frag_prayer_tv)
     TextView frag_tv_prayer_ank;
 
-    private static final String TAG = YwedswaFragment.class.getName();
-    public int Language;
     private String passed_day;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -43,17 +41,14 @@ public class AnkeseBrhanFragment extends Fragment {
             passed_day = getArguments().getString(PASSED_TO_FRAG);
         }
 
-        Language = Utility.setLanguage(passed_day, context);
+        int language = Utility.setLanguage(passed_day, context);
 
-        switch (Language) {
+        switch (language) {
             case GEEZ:
                 frag_tv_prayer_ank.setText(getResources().getString(R.string.ank_geez_prayer));
                 break;
             case AMHARIC:
-                frag_tv_prayer_ank.setText(getResources().getString(R.string.ank_amh_prayer));
-                break;
-            case ENGLISH:
-                frag_tv_prayer_ank.setText(getResources().getString(R.string.ank_eng_prayer));
+                frag_tv_prayer_ank.setText(Html.fromHtml(getResources().getString(R.string.ank_amh_prayer)));
                 break;
             case TIGRIGNA:
                 frag_tv_prayer_ank.setText(getResources().getString(R.string.ank_tig_prayer));

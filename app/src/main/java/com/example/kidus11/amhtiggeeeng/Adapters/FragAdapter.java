@@ -13,8 +13,8 @@ import java.util.List;
 
 public class FragAdapter extends FragmentPagerAdapter {
 
-    List <Fragment> fragmentsList = new ArrayList<>();
-    List <String> fragmentsTitle = new ArrayList<>();
+    private final List <Fragment> fragmentsList = new ArrayList<>();
+    private final List <String> fragmentsTitle = new ArrayList<>();
 
     public void addFragment(Fragment fragment, String title) {
         fragmentsList.add(fragment);

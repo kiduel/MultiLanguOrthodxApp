@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/language_root_card"
     android:elevation="3dp"
     android:layout_margin="1dp"
     >
@@ -12,6 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@drawable/touch_selector"
             android:padding="6dp">
             <TextView
                 android:id="@+id/day"

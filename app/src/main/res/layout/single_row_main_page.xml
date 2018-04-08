@@ -1,27 +1,48 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
 
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+        android:layout_margin="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/option_bk"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="140dp"
             android:scaleType="fitXY"
             android:src="@drawable/prayer"
             android:contentDescription="@string/image_description" />
 
         <TextView
             android:id="@+id/option_name"
-            style="@style/HeadingTextStyle"
+            android:textSize="30sp"
+            android:layout_marginStart="32dp"
+            android:layout_alignBottom="@id/option_bk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textColor="@color/colorMenuText"
             tools:text="Desert Experience" />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_below="@id/option_bk"
-            android:background="#FFF">
-        </View>
     </RelativeLayout>
+        <TextView
+            android:id="@+id/main_prayer_desc"
+            android:layout_margin="16dp"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="Hello This is going to be disc of th prayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

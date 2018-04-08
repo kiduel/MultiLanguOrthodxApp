@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,11 +29,13 @@ import static com.example.kidus11.amhtiggeeeng.Utility.TIGRIGNA;
 
 public class YeZewetrFragment extends Fragment {
      @BindView(R.id.zewetr_frag_prayer_tv)
-      TextView frag_tv_prayer;
+     TextView frag_tv_prayer;
+    @BindView(R.id.zewetr_frag_prayer_eng_tv)
+    TextView frag_tv_prayer_eng;
 
     private static final String TAG = YeZewetrFragment.class.getName();
-    public int Language;
     private String passed_day;
+    private String prayer;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.zewetr_fragment, container, false);
@@ -45,24 +48,40 @@ public class YeZewetrFragment extends Fragment {
         }
         Log.i(TAG, passed_day);
 
-        Language = Utility.setLanguage(passed_day, context);
+        int language = Utility.setLanguage(passed_day, context);
+        prayer = getResources().getString(R.string.zewetrTselot_eng_prayer);
 
-        switch (Language) {
+        switch (language) {
             case GEEZ:
+                makePrayerNotEnglish();
                 frag_tv_prayer.setText(getResources().getString(R.string.zewetrTselot_geez_prayer));
                 break;
             case AMHARIC:
-                frag_tv_prayer.setText(getResources().getString(R.string.zewetrTselot_amh_prayer));
+                makePrayerNotEnglish();
+                frag_tv_prayer.setText(Html.fromHtml(getResources().getString(R.string.zewetrTselot_amh_prayer)));
                 break;
             case ENGLISH:
-                frag_tv_prayer.setText(getResources().getString(R.string.zewetrTselot_eng_prayer));
+                makePrayerEnglish();
                 break;
             case TIGRIGNA:
+                makePrayerNotEnglish();
                 frag_tv_prayer.setText(getResources().getString(R.string.zewetrTselot_tig_prayer));
                 break;
         }
 
         return view;
     }
+
+    private void makePrayerEnglish(){
+        frag_tv_prayer.setVisibility(View.INVISIBLE);
+        frag_tv_prayer_eng.setVisibility(View.VISIBLE);
+        frag_tv_prayer_eng.setText(Html.fromHtml(prayer));
+    }
+
+    private void makePrayerNotEnglish(){
+        frag_tv_prayer.setVisibility(View.VISIBLE);
+        frag_tv_prayer_eng.setVisibility(View.INVISIBLE);
+    }
+
 
 }

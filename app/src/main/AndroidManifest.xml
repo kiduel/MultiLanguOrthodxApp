@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kidus11.amhtiggeeeng">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:fullBackupContent="@xml/backup_descriptor">
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".Activities.MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.MainNoTitle"
+            android:launchMode="singleTop"
+            tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,10 +31,27 @@
         </activity>
         <activity
             android:name=".Activities.LangaugeActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".Activities.DaysActivity" />
-        <activity android:name=".Activities.PrayerFragmentActivity" />
-        <activity android:name=".Activities.MezdawitActivity"></activity>
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Activities.DaysActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Activities.PrayerFragmentActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Activities.MezdawitActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Activities.ZemaActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Activities.KdaseActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Activities.AudioActivity"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Activities.MusicPlayerAct"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            tools:ignore="InnerclassSeparator" />
+        <service android:enabled="true"
+            android:name=".services.AudioService">
+        </service>
     </application>
 
 </manifest>

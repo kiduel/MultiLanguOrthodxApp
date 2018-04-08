@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static com.example.kidus11.amhtiggeeeng.Activities.PrayerFragmentActivity.PASSED_TO_FRAG;
+import static com.example.kidus11.amhtiggeeeng.Utility.AMHARIC;
+import static com.example.kidus11.amhtiggeeeng.Utility.GEEZ;
+import static com.example.kidus11.amhtiggeeeng.Utility.TIGRIGNA;
 
 /**
  * Created by kidus11 on 12/21/17.
@@ -24,9 +28,11 @@ import static com.example.kidus11.amhtiggeeeng.Activities.PrayerFragmentActivity
 public class DawitPartOneFragment extends Fragment {
     @BindView(R.id.mez_dawit_part_one_tv)
     TextView mez_dawit_part_one_tv;
+    @BindView(R.id.eng_text_daw_1)
+    TextView mez_dawit_part_one_eng_tv;
 
-    String passed_day;
-    public int language;
+    private String passed_day;
+    private String prayer;
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dawit_one_fragment, container, false);
@@ -37,13 +43,30 @@ public class DawitPartOneFragment extends Fragment {
             passed_day = getArguments().getString(PASSED_TO_FRAG);
         }
 
-        language = Utility.setLanguage(passed_day, context);
+        int language = Utility.setLanguage(passed_day, context);
         String mez_dawit [] = Utility.forMezDawit(language, passed_day, context);
-        String first_mezmur = mez_dawit[0];
-        mez_dawit_part_one_tv.setText(first_mezmur);
+        prayer = mez_dawit[0];
+
+        if (language == Utility.ENGLISH) {
+            makePrayerEnglish();
+        } else makePrayerNotEnglish();
+
+        if (language == AMHARIC || language == TIGRIGNA || language == GEEZ){
+            mez_dawit_part_one_tv.setText(Html.fromHtml(prayer));
+        } else mez_dawit_part_one_tv.setText(prayer);
 
 
         return view;
+    }
 
+    private void makePrayerEnglish(){
+        mez_dawit_part_one_tv.setVisibility(View.INVISIBLE);
+        mez_dawit_part_one_eng_tv.setVisibility(View.VISIBLE);
+        mez_dawit_part_one_eng_tv.setText(Html.fromHtml(prayer));
+    }
+
+    private void makePrayerNotEnglish(){
+        mez_dawit_part_one_tv.setVisibility(View.VISIBLE);
+        mez_dawit_part_one_eng_tv.setVisibility(View.INVISIBLE);
     }
 }

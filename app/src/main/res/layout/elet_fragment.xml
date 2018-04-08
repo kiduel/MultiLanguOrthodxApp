@@ -1,17 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/elet_frag_prayer_tv"
+                style="@style/PrayerText"
+                tools:text="This is placeholder for the elet prayer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
 
-    <TextView
-        android:id="@+id/elet_frag_prayer_tv"
-        tools:text="This is placeholder for the elet prayer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            <TextView
+                style="@style/PrayerTextEnglish"
+                android:id="@+id/elet_frag_prayer_eng_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/english_prayer_placeholder"
+                android:textSize="18sp" />
+
+        </FrameLayout>
 
 
-</LinearLayout>
+    </ScrollView>
+

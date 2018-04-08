@@ -5,8 +5,8 @@ package com.example.kidus11.amhtiggeeeng.data;
  */
 
 public class Language {
-    private String languageName;
-    private String description;
+    private final String languageName;
+    private final String description;
 
     public Language(String languageName, String description) {
         this.languageName = languageName;

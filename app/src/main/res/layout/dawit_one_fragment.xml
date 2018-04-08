@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/mez_dawit_part_one_tv"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/place_holder_dawit_one"
-         />
+        android:layout_height="wrap_content">
 
-</LinearLayout>
+        <TextView
+            style="@style/PrayerText"
+            android:id="@+id/mez_dawit_part_one_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/place_holder_dawit_one"
+            />
+
+        <TextView
+            style="@style/PrayerTextEnglish"
+            android:id="@+id/eng_text_daw_1"
+            android:layout_width="wrap_content"
+            android:text="@string/english_prayer_placeholder"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+</ScrollView>

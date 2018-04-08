@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    tools:context="com.example.kidus11.amhtiggeeeng.Activities.MusicPlayerAct">
+
+
+
+        <TextView
+            android:id="@+id/music_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/place_holder_dawit_one"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/audio_image_tv"
+            android:layout_width="700dp"
+            android:contentDescription="@string/album_art"
+            android:layout_height="500dp"
+            android:layout_below="@+id/music_title_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/music_place_holder" />
+
+    <Button
+        android:id="@+id/play_pause_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/audio_image_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_play_arrow_black_48dp" />
+
+    <SeekBar
+        android:layout_margin="8dp"
+        android:id="@+id/seek_bar_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/play_pause_image" />
+
+
+            <TextView
+                android:layout_below="@id/seek_bar_tv"
+                android:id="@+id/duration_start_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="@string/audio_start_time" />
+            <TextView
+                android:layout_below="@id/seek_bar_tv"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/duration_end_tv"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content"
+                android:text="@string/audio_start_time" />
+
+    </RelativeLayout>
+

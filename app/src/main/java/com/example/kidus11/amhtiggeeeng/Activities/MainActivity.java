@@ -15,8 +15,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.rv_main) RecyclerView rv_main;
-    MainRVPageAdapter mAdapter;
+    @BindView(R.id.rv_main)
+     RecyclerView rv_main;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +25,13 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         //rv = (RecyclerView) findViewById(R.id.rv_main);
         ArrayList <PrayersMain> menuOptions = new ArrayList<>();
-        menuOptions.add(new PrayersMain(getResources().getString(R.string.prayer_menu),R.drawable.prayer));
-        menuOptions.add(new PrayersMain(getResources().getString(R.string.hymn_menu),R.drawable.zema));
-        menuOptions.add(new PrayersMain(getResources().getString(R.string.litrugy_menu),R.drawable.priests));
+        menuOptions.add(new PrayersMain(getResources().getString(R.string.prayer_menu),"ግዕዝ፣ አማርኛ፣ ትግርኛ or English", R.drawable.prayer));
+        menuOptions.add(new PrayersMain(getResources().getString(R.string.hymn_menu),"ውዳሴ ማርያም እና ሰዓታት", R.drawable.zema));
+        menuOptions.add(new PrayersMain(getResources().getString(R.string.litrugy_menu),"ቅዳሴ በአማርኛ እና በትግርኛ",R.drawable.priests));
 
 
         // Lookup the recyclerview in activity layout
-        mAdapter = new MainRVPageAdapter(this, menuOptions);
+        MainRVPageAdapter mAdapter = new MainRVPageAdapter(this, menuOptions);
        // RecyclerView rv_religious_main_page = (RecyclerView) findViewById(R.id.rv_main);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         rv_main.setLayoutManager(layoutManager);
@@ -39,5 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }
 

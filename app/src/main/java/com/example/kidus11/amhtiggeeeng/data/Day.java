@@ -5,7 +5,7 @@ package com.example.kidus11.amhtiggeeeng.data;
  */
 
 public class Day {
-    private String date;
+    private final String date;
     private String date_prayer_inside;
 
     public Day(String date, String date_prayer_inside) {
@@ -13,9 +13,6 @@ public class Day {
         this.date_prayer_inside = date_prayer_inside;
     }
 
-    public Day(String date) {
-        this.date = date;
-    }
 
     public String getDate() {
         return date;
