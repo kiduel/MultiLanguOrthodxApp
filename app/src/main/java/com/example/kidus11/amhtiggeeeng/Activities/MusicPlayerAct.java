@@ -88,7 +88,7 @@ public class MusicPlayerAct extends AppCompatActivity implements OnSongDurationO
             Toast.makeText(this, "Please connect to the internet", Toast.LENGTH_LONG).show();
         }
         Picasso
-                .with(this)
+                .get()
                 .load(image_file_received)
                 .placeholder(R.drawable.placeholder) // can also be a drawable
                 .into(audio_image);

@@ -54,7 +54,7 @@ public class YeZewetrFragment extends Fragment {
         switch (language) {
             case GEEZ:
                 makePrayerNotEnglish();
-                frag_tv_prayer.setText(getResources().getString(R.string.zewetrTselot_geez_prayer));
+                frag_tv_prayer.setText(Html.fromHtml(getResources().getString(R.string.zewetrTselot_geez_prayer)));
                 break;
             case AMHARIC:
                 makePrayerNotEnglish();
