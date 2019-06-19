@@ -65,7 +65,7 @@ public class YeZewetrFragment extends Fragment {
                 break;
             case TIGRIGNA:
                 makePrayerNotEnglish();
-                frag_tv_prayer.setText(getResources().getString(R.string.zewetrTselot_tig_prayer));
+                frag_tv_prayer.setText(Html.fromHtml(getResources().getString(R.string.zewetrTselot_tig_prayer)));
                 break;
         }
 
