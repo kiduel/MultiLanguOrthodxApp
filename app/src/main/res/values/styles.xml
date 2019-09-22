@@ -9,9 +9,9 @@
 
     </style>
 
-    <style name="ActionBar.Solid.Prayer.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+    <style name="ActionBar.Solid.Prayer.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
         <item name="displayOptions">useLogo|showHome</item>
-        <item name="logo">@drawable/prayer</item>
+        <item name="logo">@drawable/bete_selot_tool_image</item>
      </style>
 
 

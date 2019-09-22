@@ -53,7 +53,7 @@ public class YwedswaFragment extends Fragment {
         switch (language) {
             case GEEZ:
                 makePrayerNotEnglish();
-                frag_tv_prayer_yw.setText(getResources().getString(R.string.ywedswa_geez_prayer));
+                frag_tv_prayer_yw.setText(Html.fromHtml(getResources().getString(R.string.ywedswa_geez_prayer)));
                 break;
             case AMHARIC:
                 makePrayerNotEnglish();
@@ -64,7 +64,7 @@ public class YwedswaFragment extends Fragment {
                 break;
             case TIGRIGNA:
                 makePrayerNotEnglish();
-                frag_tv_prayer_yw.setText(getResources().getString(R.string.ywedswa_tig_prayer));
+                frag_tv_prayer_yw.setText(Html.fromHtml(getResources().getString(R.string.ywedswa_tig_prayer)));
                 break;
         }
 

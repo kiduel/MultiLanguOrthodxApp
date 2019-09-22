@@ -10,7 +10,9 @@ import com.example.kidus11.amhtiggeeeng.Adapters.LanguageRVAdapter;
 import com.example.kidus11.amhtiggeeeng.R;
 import com.example.kidus11.amhtiggeeeng.data.Language;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
@@ -30,13 +32,21 @@ public class LangaugeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_langauge);
         ButterKnife.bind(this);
         setTitle(getResources().getString(R.string.prayer_menu));
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
 
-        //To request and load Ads that is already in the layout
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("0DEEF21400DD4AF964C51630FE5112C7")
-                .build();
-        banner_ad.loadAd(adRequest);
+        AdView adView = new AdView(this);
+        adView.setAdSize(AdSize.BANNER);
+        adView.setAdUnitId("ca-app-pub-9469561731184259/2670399523");
+
+//        //To request and load Ads that is already in the layout
+//        AdRequest adRequest = new AdRequest.Builder()
+//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+//                .addTestDevice("0DEEF21400DD4AF964C51630FE5112C7")
+//                .build();
+//        banner_ad.loadAd(adRequest);
+
+
+
 
         //provide back button on the actionBar
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();

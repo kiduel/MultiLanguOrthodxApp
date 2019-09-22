@@ -45,13 +45,13 @@ public class AnkeseBrhanFragment extends Fragment {
 
         switch (language) {
             case GEEZ:
-                frag_tv_prayer_ank.setText(getResources().getString(R.string.ank_geez_prayer));
+                frag_tv_prayer_ank.setText(Html.fromHtml(getResources().getString(R.string.ank_geez_prayer)));
                 break;
             case AMHARIC:
                 frag_tv_prayer_ank.setText(Html.fromHtml(getResources().getString(R.string.ank_amh_prayer)));
                 break;
             case TIGRIGNA:
-                frag_tv_prayer_ank.setText(getResources().getString(R.string.ank_tig_prayer));
+                frag_tv_prayer_ank.setText(Html.fromHtml(getResources().getString(R.string.ank_tig_prayer)));
                 break;
         }
 

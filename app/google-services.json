@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "128701004337",
+    "firebase_url": "https://betetselot-74d75.firebaseio.com",
+    "project_id": "betetselot-74d75",
+    "storage_bucket": "betetselot-74d75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128701004337:android:a2485d0feadc561d",
+        "android_client_info": {
+          "package_name": "com.example.kidus11.amhtiggeeeng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128701004337-gicnis3ivouks1q05iktsa4ib20bgglt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5j-aQuMgVJLHmlWiiPlK26EBissNzIoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128701004337-gicnis3ivouks1q05iktsa4ib20bgglt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -79,7 +79,7 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.ViewHolder> 
         Audio audios = audio.get(position);
         holder.title.setText(audios.getAudio_title());
         Picasso
-                .with(context)
+                .get()
                 .load(audios.getImageUrl())
                 .placeholder(R.drawable.placeholder) // can also be a drawable
                 .into(holder.audio_img);

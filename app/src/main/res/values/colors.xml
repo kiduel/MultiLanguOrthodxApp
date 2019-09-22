@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#009688</color>
-    <color name="colorPrimaryDark">#004D40</color>
+    <color name="colorPrimary">#FD9800</color>
+    <color name="colorPrimaryDark">#EB6C01</color>
     <color name="colorAccent">#FF6F00</color>
     <color name="colorMenuText">#FFF</color>
-
 
     <!-- the activated state color for a forecast list item -->
     <color name="activated">#E0E0E0</color>
