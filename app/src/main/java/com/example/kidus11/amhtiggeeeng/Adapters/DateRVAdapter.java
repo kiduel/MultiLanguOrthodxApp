@@ -3,7 +3,7 @@ package com.example.kidus11.amhtiggeeeng.Adapters;
 import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,8 +46,8 @@ public class DateRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             // to access the context from any ViewHolder instance.
             super(itemView);
             this.parentView = itemView;
-            days = itemView.findViewById(R.id.day);
-            days_desc = itemView.findViewById(R.id.day_des);
+            days = itemView.findViewById(R.id.language_name);
+            days_desc = itemView.findViewById(R.id.language_desc);
 
             this.parentView.setOnClickListener(this);
         }
@@ -126,10 +126,8 @@ public class DateRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-     //   DateRVAdapter.ViewHolder viewHolder = null;
         RecyclerView.ViewHolder viewHolder_org = null;
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-
 
         switch (viewType) {
             case Day:
@@ -142,12 +140,6 @@ public class DateRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 break;
         }
         return viewHolder_org;
-
-        // Inflate the custom layout
-       // View optionView = inflater.inflate(R.layout.sing_row_date, parent, false);
-
-        // Return a new holder instance
-       // return new DateRVAdapter.ViewHolder(optionView);
     }
 
 
@@ -163,16 +155,6 @@ public class DateRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 configureViewHolder2(vh2);
                 break;
         }
-
-        /*
-         RecyclerView. ViewHolder viewHolder;
-       LayoutInflater inflater
-
-
-        Day option = days.get(position);
-        holder.days.setText(option.getDate());
-        holder.days_desc.setText(option.getDateDesc());
-         */
     }
 
 

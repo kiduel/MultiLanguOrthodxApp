@@ -2,7 +2,7 @@ package com.example.kidus11.amhtiggeeeng.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,7 +52,7 @@ public class AudioAdapter_two extends RecyclerView.Adapter<AudioAdapter_two.View
             Intent intent = new Intent(context, MusicPlayerAct.class);
             Audio audios = audio.get(getAdapterPosition());
             String url = audios.getAudioUrl();
-            String img_url = audios.getImageUrl();
+            int img_url = audios.getImageUrl();
             String title_url = audios.getAudio_title();
             intent.putExtra("audio_url",url);
             intent.putExtra("img_url",img_url);

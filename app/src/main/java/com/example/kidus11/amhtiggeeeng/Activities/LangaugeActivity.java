@@ -1,15 +1,14 @@
 package com.example.kidus11.amhtiggeeeng.Activities;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.MenuItem;
 
 import com.example.kidus11.amhtiggeeeng.Adapters.LanguageRVAdapter;
 import com.example.kidus11.amhtiggeeeng.R;
 import com.example.kidus11.amhtiggeeeng.data.Language;
-import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -49,7 +48,7 @@ public class LangaugeActivity extends AppCompatActivity {
 
 
         //provide back button on the actionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         ArrayList<Language> languageOptions = new ArrayList<>();

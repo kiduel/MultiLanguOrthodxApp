@@ -2,9 +2,9 @@ package com.example.kidus11.amhtiggeeeng.Activities;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.tabs.TabLayout;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.example.kidus11.amhtiggeeeng.Adapters.FragAdapter;
@@ -47,7 +47,7 @@ public class PrayerFragmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         //provide back button on the actionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 

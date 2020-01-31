@@ -1,6 +1,8 @@
 package com.example.kidus11.amhtiggeeeng;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.util.Log;
@@ -10,7 +12,7 @@ import android.util.Log;
  */
 
 public class Utility {
-    public final static int GEEZ = 1;
+    public static final int GEEZ = 1;
     public final static int AMHARIC = 2;
     public final static int ENGLISH = 3;
     public final static int TIGRIGNA = 4;
@@ -136,7 +138,7 @@ public class Utility {
             } else if ( day.equals((context.getResources().getString(R.string.day_thursday_amharic))) ) {
                 prayer = ((context.getResources().getString(R.string.wdase_maryam_amh_thur)));
             } else if ( day.equals((context.getResources().getString(R.string.day_friday_amharic))) ) {
-                prayer = ((context.getResources().getString(R.string.wdase_maryam_amh_fri)));
+                prayer = (context.getResources().getString(R.string.wdase_maryam_amh_fri));
             } else if ( day.equals(context.getResources().getString(R.string.day_saturday_amharic)) ) {
                 prayer = ((context.getResources().getString(R.string.wdase_maryam_amh_sat)));
             } else if ( day.equals((context.getResources().getString(R.string.day_sunday_amharic))) ) {
@@ -298,7 +300,7 @@ public class Utility {
                 prayer_three = ((context.getResources().getString(R.string.daw_tig_third_third)));
             } else if ( day.equals(context.getResources().getString(R.string.daw_tig_4th)) ) {
                 prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));
-            //    prayer_two = ((context.getResources().getString(R.string.daw_tig_fourth_second)));
+                prayer_two = ((context.getResources().getString(R.string.daw_tig_fourth_second)));
                 prayer_three = ((context.getResources().getString(R.string.daw_tig_fourth_third)));
             } else if (day.equals(context.getResources().getString(R.string.daw_tig_5th)) ) {
                 prayer_one = ((context.getResources().getString(R.string.daw_tig_intro)));

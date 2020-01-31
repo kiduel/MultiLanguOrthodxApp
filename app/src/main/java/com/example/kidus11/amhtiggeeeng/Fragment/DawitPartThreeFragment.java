@@ -2,8 +2,8 @@ package com.example.kidus11.amhtiggeeeng.Fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,13 +65,13 @@ public class DawitPartThreeFragment extends Fragment {
     }
 
     private void makePrayerEnglish(){
-        mez_dawit_part_three_tv.setVisibility(View.INVISIBLE);
+        mez_dawit_part_three_tv.setVisibility(View.GONE);
         mez_dawit_part_three_eng_tv.setVisibility(View.VISIBLE);
         mez_dawit_part_three_eng_tv.setText(Html.fromHtml(prayer));
     }
 
     private void makePrayerNotEnglish(){
         mez_dawit_part_three_tv.setVisibility(View.VISIBLE);
-        mez_dawit_part_three_eng_tv.setVisibility(View.INVISIBLE);
+        mez_dawit_part_three_eng_tv.setVisibility(View.GONE);
     }
 }

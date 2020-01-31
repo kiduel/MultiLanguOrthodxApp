@@ -1,11 +1,11 @@
 package com.example.kidus11.amhtiggeeeng.Activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.view.MenuItem;
 
 import com.example.kidus11.amhtiggeeeng.Adapters.AudioAdapter;
@@ -44,13 +44,13 @@ public class ZemaActivity extends AppCompatActivity {
         banner_ad.loadAd(adRequest);
 
         //provide back button on the actionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         ArrayList<Audio> zema = new ArrayList<>();
 
-        zema.add(new Audio(getResources().getString(R.string.wdase_maryam),"https://i.pinimg.com/736x/b3/fc/78/b3fc782c37bdb1d2561564fc28a07e4d--white-background-wallpaper.jpg"));
-        zema.add(new Audio(getResources().getString(R.string.seatat),"https://i.pinimg.com/736x/b3/fc/78/b3fc782c37bdb1d2561564fc28a07e4d--white-background-wallpaper.jpg"));
+        zema.add(new Audio(getResources().getString(R.string.wdase_maryam),R.drawable.maryam_image));
+        zema.add(new Audio(getResources().getString(R.string.seatat),R.drawable.maryam_image));
 
         AudioAdapter audioAdapter = new AudioAdapter(this, zema);
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);

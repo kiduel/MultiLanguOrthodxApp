@@ -1,10 +1,9 @@
 package com.example.kidus11.amhtiggeeeng.Activities;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.MenuItem;
 
 import com.example.kidus11.amhtiggeeeng.Adapters.DateRVAdapter;
@@ -49,7 +48,7 @@ public class DaysActivity extends AppCompatActivity {
         banner_ad.loadAd(adRequest);
 
         //provide back button on the actionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         Bundle bundle = new Bundle();
@@ -119,10 +118,8 @@ public class DaysActivity extends AppCompatActivity {
             adapter = new DateRVAdapter(this, Tig_days);
         }
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);
         rv_days.setLayoutManager(layoutManager);
         rv_days.setAdapter(adapter);
-        rv_days.addItemDecoration(itemDecoration);
 
     }
 

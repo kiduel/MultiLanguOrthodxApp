@@ -2,9 +2,12 @@
 <resources>
     <color name="colorPrimary">#FD9800</color>
     <color name="colorPrimaryDark">#EB6C01</color>
+    <color name="colorPrimaryLight">#FDF1DD</color>
     <color name="colorAccent">#FF6F00</color>
     <color name="colorMenuText">#FFF</color>
+    <color name="activated">#E0E0E0</color>
+    <color name="lightGreyColor">#f2f2f2</color>
 
     <!-- the activated state color for a forecast list item -->
-    <color name="activated">#E0E0E0</color>
+
 </resources>

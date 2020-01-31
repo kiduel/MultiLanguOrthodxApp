@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -81,7 +81,7 @@ public class MusicPlayerAct extends AppCompatActivity implements OnSongDurationO
         banner_ad.loadAd(adRequest);
 
         //provide back button on the actionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         if (!Utility.isOnline(this)){

@@ -1,11 +1,13 @@
 package com.example.kidus11.amhtiggeeeng.Activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -39,7 +41,7 @@ public class KdaseActivity extends AppCompatActivity{
         setTitle("ቅዳሴ");
 
         //provide back button on the actionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
@@ -52,13 +54,28 @@ public class KdaseActivity extends AppCompatActivity{
 
         //notify users that they are not connected to the internet
         if (!Utility.isOnline(this)){
-            Toast.makeText(this, "Please connect to the internet", Toast.LENGTH_LONG).show();
-        }
+            try {
+                AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+
+                alertDialog.setTitle("Info");
+                alertDialog.setMessage(this.getString(R.string.no_internet));
+                alertDialog.setIcon(android.R.drawable.ic_dialog_alert);
+                alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+
+                    }
+                });
+
+                alertDialog.show();
+            } catch (Exception e) {
+
+            }        }
         String prayerLanguage = getIntent().getStringExtra("audio_passed");
 
         ArrayList<Audio> kidaseOptions = new ArrayList<>();
-        kidaseOptions.add(new Audio(getResources().getString(R.string.card_title_Amharic),"https://i.pinimg.com/736x/b3/fc/78/b3fc782c37bdb1d2561564fc28a07e4d--white-background-wallpaper.jpg"));
-        kidaseOptions.add(new Audio(getResources().getString(R.string.card_title_Tig),"https://i.pinimg.com/736x/b3/fc/78/b3fc782c37bdb1d2561564fc28a07e4d--white-background-wallpaper.jpg"));
+        kidaseOptions.add(new Audio(getResources().getString(R.string.card_title_Amharic),R.drawable.maryam_image));
+        kidaseOptions.add(new Audio(getResources().getString(R.string.card_title_Tig),R.drawable.maryam_image));
 
         AudioAdapter kdaseLan = new AudioAdapter(this, kidaseOptions);
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL);

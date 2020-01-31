@@ -1,11 +1,11 @@
 package com.example.kidus11.amhtiggeeeng.Activities;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -45,13 +45,12 @@ public class AudioActivity extends AppCompatActivity {
         String IMAGE_URL_WDASE_MARYAM = "http://www.ethiopianorthodox.org/images/icons/st-mary_with-angeles.gif";
 
         //provide back button on the actionBar
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        androidx.appcompat.app.ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         setContentView(R.layout.activity_audio);
         ButterKnife.bind(this);
         String prayerLanguage = getIntent().getStringExtra("audio_passed");
-        setTitle("ds");
 
 
         //To request and load Ads that is already in the layout
@@ -62,39 +61,37 @@ public class AudioActivity extends AppCompatActivity {
         banner_ad.loadAd(adRequest);
 
         ArrayList<Audio> wdaseMaryam = new ArrayList<>();
-        wdaseMaryam.add(new Audio(" ሰላም ለኪ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"SELAM+LEKI+2.mp3"));
-        wdaseMaryam.add(new Audio(" ዘሰኑይ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"Monday.mp3"));
-        wdaseMaryam.add(new Audio(" ዘሠሉስ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"Tuesday.mp3"));
-        wdaseMaryam.add(new Audio(" ዘረቡዕ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"Wednesday.mp3"));
-        wdaseMaryam.add(new Audio(" ዘኅሙስ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"Thursday.mp3"));
-        wdaseMaryam.add(new Audio(" ዘዓርብ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"Firday.mp3"));
-        wdaseMaryam.add(new Audio(" ዘቅዳሚት","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"Satruday.mp3"));
-        wdaseMaryam.add(new Audio(" ዘሰነበተ ክርስቲያን","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_WDASE_MARYAM, AMAZON_URL_WDASE_MARYAM+"Sunday.mp3"));
+        wdaseMaryam.add(new Audio(" ሰላም ለኪ",getString(R.string.priest_name),R.drawable.maryam_image,"//audio.jukehost.co.uk/p/79a4962643707ae238aca947564f44c18783e18c/500c9922e49"));
+        wdaseMaryam.add(new Audio(" ዘሰኑይ",getString(R.string.priest_name),R.drawable.maryam_image, "https://1drv.ms/u/s!AjZfIA7Ta0n_f2OBdI4uPxzicBs?e=eeXimT"));
+        wdaseMaryam.add(new Audio(" ዘሠሉስ",getString(R.string.priest_name),R.drawable.maryam_image, AMAZON_URL_WDASE_MARYAM+"Tuesday.mp3"));
+        wdaseMaryam.add(new Audio(" ዘረቡዕ",getString(R.string.priest_name),R.drawable.maryam_image, AMAZON_URL_WDASE_MARYAM+"Wednesday.mp3"));
+        wdaseMaryam.add(new Audio(" ዘኅሙስ",getString(R.string.priest_name),R.drawable.maryam_image, AMAZON_URL_WDASE_MARYAM+"Thursday.mp3"));
+        wdaseMaryam.add(new Audio(" ዘዓርብ",getString(R.string.priest_name),R.drawable.maryam_image, AMAZON_URL_WDASE_MARYAM+"Firday.mp3"));
+        wdaseMaryam.add(new Audio(" ዘቅዳሚት",getString(R.string.priest_name),R.drawable.maryam_image, AMAZON_URL_WDASE_MARYAM+"Satruday.mp3"));
+        wdaseMaryam.add(new Audio(" ዘሰነበተ ክርስቲያን",getString(R.string.priest_name),R.drawable.maryam_image, AMAZON_URL_WDASE_MARYAM+"Sunday.mp3"));
 
         ArrayList<Audio> seatat = new ArrayList<>();
-        seatat.add(new Audio(" ነሲእየ ማዕተበ - ንሴብሖ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT, AMAZON_URL_SEATAT+"part+1.mp3"));
-        seatat.add(new Audio(" ገነይነ ለኪ - ኲሎሙ ርኢክዎ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT,AMAZON_URL_SEATAT+"part+2.mp3"));
-        seatat.add(new Audio(" ኲሎሙ ወባቲ - ኲሎሙ ዘቊስቋም","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT, AMAZON_URL_SEATAT+"part+3.mp3"));
-        seatat.add(new Audio(" ኲሎሙ ዘኪዳነ ምሕረት - አቊርር","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT, AMAZON_URL_SEATAT+"part+4.mp3"));
-        seatat.add(new Audio(" ሚካኤል  -  ለኖኅ ሐመሩ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT, AMAZON_URL_SEATAT+"part+5.mp3"));
-        seatat.add(new Audio(" ስብሐተ ኢየሱስ  - ስብሐተ ፍቁር ዘመላእክት","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT, AMAZON_URL_SEATAT+"part+6.mp3"));
-        seatat.add(new Audio(" መሐረነ አብ - መል.ውዳሴ ዘአንቀጸ ብርሃን","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT, AMAZON_URL_SEATAT+"part+7.mp3"));
-        seatat.add(new Audio(" መቅድመ ተአምር - እሴብሕ ጸጋኪ","ቀሲስ ዮሃንስ ነጋሲ",IMAGE_URL_SEATAT, AMAZON_URL_SEATAT+"part+8.mp3"));
+        seatat.add(new Audio(" ነሲእየ ማዕተበ - ንሴብሖ",getString(R.string.setatat_priest),R.drawable.maryam_image, AMAZON_URL_SEATAT+"part+1.mp3"));
+        seatat.add(new Audio(" ገነይነ ለኪ - ኲሎሙ ርኢክዎ",getString(R.string.setatat_priest),R.drawable.maryam_image,AMAZON_URL_SEATAT+"part+2.mp3"));
+        seatat.add(new Audio(" ኲሎሙ ወባቲ - ኲሎሙ ዘቊስቋም",getString(R.string.setatat_priest),R.drawable.maryam_image, AMAZON_URL_SEATAT+"part+3.mp3"));
+        seatat.add(new Audio(" ኲሎሙ ዘኪዳነ ምሕረት - አቊርር",getString(R.string.setatat_priest),R.drawable.maryam_image, AMAZON_URL_SEATAT+"part+4.mp3"));
+        seatat.add(new Audio(" ሚካኤል  -  ለኖኅ ሐመሩ",getString(R.string.setatat_priest),R.drawable.maryam_image, AMAZON_URL_SEATAT+"part+5.mp3"));
+        seatat.add(new Audio(" ስብሐተ ኢየሱስ  - ስብሐተ ፍቁር ዘመላእክት",getString(R.string.setatat_priest),R.drawable.maryam_image, AMAZON_URL_SEATAT+"part+6.mp3"));
+        seatat.add(new Audio(" መሐረነ አብ - መል.ውዳሴ ዘአንቀጸ ብርሃን",getString(R.string.setatat_priest),R.drawable.maryam_image, AMAZON_URL_SEATAT+"part+7.mp3"));
+        seatat.add(new Audio(" መቅድመ ተአምር - እሴብሕ ጸጋኪ",getString(R.string.setatat_priest),R.drawable.maryam_image, AMAZON_URL_SEATAT+"part+8.mp3"));
 
         ArrayList<Audio> hmamat = new ArrayList<>();
-        hmamat.add(new Audio(" hmamat first","hmamat Wendmu","https://images-na.ssl-images-amazon.com/images/I/517XO7mzVYL._SY300_QL70_.jpg", "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
-        hmamat.add(new Audio(" hmamat Second","hmamat Wendmu","https://images-na.ssl-images-amazon.com/images/I/517XO7mzVYL._SY300_QL70_.jpg", "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
-        hmamat.add(new Audio(" hmamat Third","hmamat Wendmu","https://images-na.ssl-images-amazon.com/images/I/517XO7mzVYL._SY300_QL70_.jpg", "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
-        hmamat.add(new Audio(" hmamat Fourth","hmamat Wendmu","https://images-na.ssl-images-amazon.com/images/I/517XO7mzVYL._SY300_QL70_.jpg", "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
+        hmamat.add(new Audio(" hmamat first","hmamat Wendmu",R.drawable.maryam_image, "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
+        hmamat.add(new Audio(" hmamat Second","hmamat Wendmu",R.drawable.maryam_image, "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
+        hmamat.add(new Audio(" hmamat Third","hmamat Wendmu", R.drawable.maryam_image, "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
+        hmamat.add(new Audio(" hmamat Fourth","hmamat Wendmu",R.drawable.maryam_image, "https://www.mfiles.co.uk/mp3-downloads/silent-night.mp3"));
 
         ArrayList<Audio> kidase_amharic = new ArrayList<>();
-        kidase_amharic.add(new Audio(" Geez","Amharic Geez","http://www.staugustinechico.com/wp-content/uploads/2016/08/icon-of-christ-high-priest-the-holy-eucharist-300x211.jpg", "https://www.mfiles.co.uk/mp3-downloads/jingle-bells-keyboard.mp3"));
-        kidase_amharic.add(new Audio(" Ezil","Amharic Ezil","http://www.staugustinechico.com/wp-content/uploads/2016/08/icon-of-christ-high-priest-the-holy-eucharist-300x211.jpg", "https://www.mfiles.co.uk/mp3-downloads/jingle-bells-keyboard.mp3"));
-        kidase_amharic.add(new Audio(" Serawite","Amharic Serawite","http://www.staugustinechico.com/wp-content/uploads/2016/08/icon-of-christ-high-priest-the-holy-eucharist-300x211.jpg", "https://www.mfiles.co.uk/mp3-downloads/jingle-bells-keyboard.mp3"));
+        kidase_amharic.add(new Audio("ሙሉ ቅዳሴ","በመምሕር የማነብርሀን",R.drawable.etan, "https://www.mfiles.co.uk/mp3-downloads/jingle-bells-keyboard.mp3"));
 
         ArrayList<Audio> kidase_tig = new ArrayList<>();
-        kidase_tig.add(new Audio(" Geez","Tig Geez","http://www.staugustinechico.com/wp-content/uploads/2016/08/icon-of-christ-high-priest-the-holy-eucharist-300x211.jpg", AMAZON_URL_KIDASE+"tig_geez.mp3"));
-        kidase_tig.add(new Audio(" Ezil","Tig Ezil","http://www.staugustinechico.com/wp-content/uploads/2016/08/icon-of-christ-high-priest-the-holy-eucharist-300x211.jpg", AMAZON_URL_KIDASE+"tig+_+ezil.mp3"));
+        kidase_tig.add(new Audio("ግዕዝ","ቀሲስ ዮሐንስ ገጋሲ",R.drawable.etan, AMAZON_URL_KIDASE+"tig_geez.mp3"));
+        kidase_tig.add(new Audio("ዕዝል - ሰራዊተ","ቀሲስ ዮሐንስ ገጋሲ",R.drawable.etan, AMAZON_URL_KIDASE+"tig+_+ezil.mp3"));
 
         ArrayList<Audio> audio_to_be_passed;
 
@@ -120,6 +117,7 @@ public class AudioActivity extends AppCompatActivity {
         rv_audio_option.setLayoutManager(staggeredGridLayoutManager);
         rv_audio_option.setAdapter(audioAdapter);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
